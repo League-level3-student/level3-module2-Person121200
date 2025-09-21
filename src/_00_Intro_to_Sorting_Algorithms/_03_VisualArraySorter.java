@@ -54,6 +54,7 @@ public class _03_VisualArraySorter extends PApplet {
         	arr[i] = (int)random(HEIGHT);
         	noStroke();
         }
+
     }
 
     @Override
@@ -63,6 +64,15 @@ public class _03_VisualArraySorter extends PApplet {
         for(int i = 0; i<arr.length; i++) {
         	rect(i*width/arr.length, HEIGHT, width/arr.length, -arr[i]);
         	stepSort(arr);
+            if(mousePressed == true) {
+            	randomize();
+            }
+        }
+    }
+    public void randomize() {
+    	for(int i = 0; i<arr.length; i++) {
+        	arr[i] = (int)random(HEIGHT);
+        	noStroke();
         }
     }
 
